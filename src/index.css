@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: theme('colors.swiggy.gray');
+  color: theme('colors.swiggy.black');
+  font-family: theme('fontFamily.sans');
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.2s, color 0.2s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: theme('colors.swiggy.black');
+  font-family: theme('fontFamily.sans');
+  font-weight: 700;
+}
+
+.card {
+  background: theme('colors.swiggy.card');
+  border-radius: theme('borderRadius.xl');
+  box-shadow: theme('boxShadow.card');
+  border: 1px solid theme('colors.swiggy.border');
+  padding: 1.5rem;
+}
+
+/* You can also drop your custom vars here */
+:root {
+  --swiggy-orange: #FC8019;
+}

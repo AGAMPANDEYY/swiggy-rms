@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Favicon (optional) -->
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/1/13/Swiggy_logo.png" />
+
+    <!-- Responsive meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Restaurant Management UI</title>
+
+    <!-- Responsive scaling styles -->
+    <style>
+      :root {
+        --app-scale: 0.9;
+      }
+
+      /* Adjust scale based on viewport width */
+      @media (max-width: 1920px) {
+        :root {
+          --app-scale: 0.9;
+        }
+      }
+
+      @media (max-width: 1600px) {
+        :root {
+          --app-scale: 0.95;
+        }
+      }
+
+      @media (max-width: 1366px) {
+        :root {
+          --app-scale: 1;
+        }
+      }
+
+      /* Apply scaling to the root element */
+      #root {
+        transform: scale(var(--app-scale));
+        transform-origin: top left;
+        width: calc(100% / var(--app-scale));
+        height: calc(100% / var(--app-scale));
+      }
+
+      /* Ensure the body fills the viewport */
+      body {
+        margin: 0;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      /* Adjust text sizes responsively */
+      @media (max-width: 1366px) {
+        .text-4xl {
+          font-size: calc(2.25rem * var(--app-scale));
+        }
+        .text-3xl {
+          font-size: calc(1.875rem * var(--app-scale));
+        }
+        .text-2xl {
+          font-size: calc(1.5rem * var(--app-scale));
+        }
+        .text-xl {
+          font-size: calc(1.25rem * var(--app-scale));
+        }
+      }
+    </style>
+  </head>
+  <!-- you can apply global Tailwind classes here -->
+  <body class="bg-gray-50 text-gray-800">
+    <!-- React will render into this -->
+    <div id="root"></div>
+
+    <!-- Vite entry point -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
